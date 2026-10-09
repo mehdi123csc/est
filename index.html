@@ -1,127 +1,73 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#070707">
-  <meta name="description" content="N by N — Modern fashion, designed to move.">
-  <title>N by N — Fashion</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="N BY N — تجربة أزياء فاخرة في قطر">
+<title>N BY N — Luxury Fashion Qatar</title>
+<link rel="stylesheet" href="./style-v2.css?v=20261009">
+<link rel="stylesheet" href="./cinematic.css?v=20261009">
 </head>
-<body>
-  <div class="loader" id="loader"><div class="loader-mark">N<span>×</span>N</div><div class="loader-line"><i></i></div></div>
-
-  <header class="nav" id="nav">
-    <a class="logo" href="#home" aria-label="N by N">N<span>×</span>N</a>
-    <nav class="desktop-nav">
-      <a href="#collection">Collection</a>
-      <a href="#men">Men</a>
-      <a href="#women">Women</a>
-      <a href="#story">Story</a>
-    </nav>
-    <div class="nav-actions">
-      <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
-      <button class="icon-btn" id="bagBtn" aria-label="Shopping bag">Bag <b id="bagCount">0</b></button>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu"><i></i><i></i></button>
+<body class="cinematic-site">
+<header class="header cinematic-header">
+  <div class="topbar">
+    <div class="lang"><span>🌐 العربية⌄</span><span class="qatarDot">◐ Qatar</span></div>
+    <a class="brand" href="#home"><img src="./logo.jpg?v=20260930" alt="N by N"><span>N BY N</span></a>
+    <div class="headTools">
+      <label class="search"><input id="searchInput" type="search" placeholder="ابحث عن منتجك المفضل..."><span>⌕</span></label>
+      <button id="accountBtn" type="button">♙ حسابي</button>
+      <button id="cartBtn" type="button">🛒 سلة <b id="cartCount">0</b></button>
     </div>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-noise"></div>
-      <div class="hero-word">N BY N</div>
-      <div class="hero-orb" aria-hidden="true"><div class="orb-ring"></div><div class="orb-core">N</div></div>
-      <div class="hero-copy">
-        <p class="eyebrow">NEW SEASON / 2026</p>
-        <h1>MOVE<br><em>DIFFERENT.</em></h1>
-        <p>Contemporary essentials engineered for presence, movement and everyday confidence.</p>
-        <a class="button light" href="#collection">Explore collection <span>↘</span></a>
-      </div>
-      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-arrow">↓</span></div>
-    </section>
-
-    <section class="manifesto reveal" id="story">
-      <p class="eyebrow">N BY N / 001</p>
-      <h2>Less noise.<br><span>More identity.</span></h2>
-      <p class="manifesto-text">A fashion label built around clean silhouettes, strong details and the freedom to move. N by N is made for people who don't need permission to stand out.</p>
-    </section>
-
-    <section class="split-section" id="men">
-      <div class="split-media men-media">
-        <div class="media-label">01 / MEN</div>
-        <div class="fashion-shape"></div>
-        <div class="media-title">MEN</div>
-      </div>
-      <div class="split-info reveal">
-        <p class="eyebrow">THE MEN'S EDIT</p>
-        <h2>Sharp.<br><em>Uncomplicated.</em></h2>
-        <p>Structured layers, relaxed proportions and essential pieces made to work together.</p>
-        <a class="text-link" href="#collection" data-filter="men">Shop men <span>→</span></a>
-      </div>
-    </section>
-
-    <section class="split-section reverse" id="women">
-      <div class="split-media women-media">
-        <div class="media-label">02 / WOMEN</div>
-        <div class="fashion-shape"></div>
-        <div class="media-title">WOMEN</div>
-      </div>
-      <div class="split-info reveal">
-        <p class="eyebrow">THE WOMEN'S EDIT</p>
-        <h2>Bold.<br><em>Effortless.</em></h2>
-        <p>Fluid forms and confident essentials designed for a modern wardrobe.</p>
-        <a class="text-link" href="#collection" data-filter="women">Shop women <span>→</span></a>
-      </div>
-    </section>
-
-    <section class="collection" id="collection">
-      <div class="section-head reveal">
-        <div><p class="eyebrow">03 / COLLECTION</p><h2>Selected <em>pieces.</em></h2></div>
-        <div class="filters">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="men">Men</button>
-          <button class="filter" data-filter="women">Women</button>
-        </div>
-      </div>
-      <div class="product-grid" id="productGrid"></div>
-    </section>
-
-    <section class="statement">
-      <div class="statement-bg">N×N</div>
-      <div class="statement-content reveal">
-        <p class="eyebrow">THE N BY N STANDARD</p>
-        <h2>Wear your<br><em>difference.</em></h2>
-        <a class="button light" href="#collection">Shop the edit <span>↘</span></a>
-      </div>
-    </section>
-
-    <section class="newsletter reveal">
-      <p class="eyebrow">STAY IN THE LOOP</p>
-      <h2>First access.<br><em>No noise.</em></h2>
-      <form id="newsletterForm"><input type="email" required placeholder="Your email address"><button type="submit">Join <span>→</span></button></form>
-      <small id="newsletterMsg"></small>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-top">
-      <div class="logo footer-logo">N<span>×</span>N</div>
-      <div class="footer-links">
-        <div><b>Explore</b><a href="#collection">Collection</a><a href="#men">Men</a><a href="#women">Women</a></div>
-        <div><b>Help</b><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Contact</a></div>
-        <div><b>Follow</b><a href="#">Instagram</a><a href="#">TikTok</a></div>
-      </div>
-    </div>
-    <div class="footer-bottom"><span>© 2026 N by N</span><span>Designed for movement.</span></div>
-  </footer>
-
-  <div class="overlay" id="searchOverlay"><button class="close" data-close="searchOverlay">×</button><div class="search-box"><p class="eyebrow">SEARCH N BY N</p><input id="searchInput" placeholder="Search products..."><div id="searchResults"></div></div></div>
-  <div class="overlay" id="bagOverlay"><button class="close" data-close="bagOverlay">×</button><aside class="bag-panel"><div class="panel-head"><h2>Your bag</h2><button class="close-inline" data-close="bagOverlay">×</button></div><div id="bagItems"></div><div class="bag-total"><span>Total</span><strong id="bagTotal">$0</strong></div><button class="button dark full" id="checkoutBtn">Checkout <span>→</span></button></aside></div>
-  <div class="mobile-menu" id="mobileMenu"><button class="close" id="mobileClose">×</button><a href="#collection">Collection</a><a href="#men">Men</a><a href="#women">Women</a><a href="#story">Story</a></div>
-
-  <script src="app.js"></script>
-</body>
-</html>
+  </div>
+  <nav>
+    <a class="active" href="#home">الرئيسية</a><a href="#shop">المنتجات</a><a href="#shop" data-jump="men">الرجال</a><a href="#shop" data-jump="women">النساء</a><a href="#offers">العروض</a><a href="#about">من نحن</a><a href="#contact">تواصل معنا</a>
+  </nav>
+</header>
+<main>
+<section id="home" class="hero heroImageOnly cinematic-hero">
+  <a class="heroImageLink" href="#shop" aria-label="اكتشف مجموعة N BY N"><img class="heroImage cinematic-layer" src="./hero.jpg?v=20261009" alt="أفق الدوحة عند الغروب"></a>
+  <div class="cinematic-shade"></div>
+  <div class="hero-copy cinematic-reveal">
+    <span class="cinematic-kicker">DOHA · QATAR</span>
+    <p class="hero-brandline">N BY N</p>
+    <h1>أسلوبٌ يترك أثرًا.</h1>
+    <p class="hero-subtitle">أناقة مختارة. حضور لا يُنسى.</p>
+    <a class="cinematic-cta" href="#shop"><span>اكتشف المجموعة</span><i>↙</i></a>
+  </div>
+  <div class="hero-index"><span>01</span><b></b><span>03</span></div>
+  <div class="hero-scroll"><span>SCROLL TO DISCOVER</span><b></b></div>
+</section>
+<section class="cinematic-intro" data-reveal><span class="eyebrow">THE ART OF STYLE</span><p>تفاصيل تُرى. جودة تُلمس. <em>أناقة تُعبّر عنك.</em></p></section>
+<section class="categoryBanners cinematic-categories">
+  <button class="catBanner cinematic-category" data-cat="men" type="button" aria-label="اكتشف مجموعة الرجال">
+    <img class="category-photo cinematic-layer" src="./men.jpg?v=20261009" alt="مجموعة أزياء الرجال"><span class="category-vignette"></span>
+    <span class="category-copy cinematic-reveal"><small class="category-kicker">THE MEN'S EDIT · 01</small><strong>حضورٌ بثقة.</strong><span class="category-subtitle">أناقة الرجل، بتفاصيلها.</span><b class="category-link">اكتشف مجموعة الرجال <i>↙</i></b></span><span class="category-number">01</span>
+  </button>
+  <button class="catBanner cinematic-category" data-cat="women" type="button" aria-label="اكتشفي مجموعة النساء">
+    <img class="category-photo cinematic-layer" src="./women.jpg?v=20261009" alt="مجموعة أزياء النساء"><span class="category-vignette"></span>
+    <span class="category-copy cinematic-reveal"><small class="category-kicker">THE WOMEN'S EDIT · 02</small><strong>جمالٌ له حضوره.</strong><span class="category-subtitle">اختيارات تليق بتفرّدك.</span><b class="category-link">اكتشفي مجموعة النساء <i>↙</i></b></span><span class="category-number">02</span>
+  </button>
+</section>
+<section class="serviceStrip cinematic-services"><div>☆<b>منتجات أصلية</b><small>جودة مضمونة</small></div><div>↻<b>إرجاع سهل</b><small>خلال 7 أيام</small></div><div>▣<b>دفع عند الاستلام</b><small>متوفر في المناطق</small></div><div>🎁<b>عروض حصرية</b><small>نضيفها دائمًا</small></div><div>♡<b>مفضلاتك</b><small>تجربة شخصية</small></div></section>
+<section id="shop" class="section shopSection cinematic-shop" data-reveal>
+  <div class="sectionHead"><div><span class="eyebrow">N BY N COLLECTION</span><h2>اختيارات الموسم</h2><p class="cinematic-section-note">قطع مختارة لتكمل أسلوبك.</p></div><a href="#shop" id="showAll">عرض الكل ←</a></div>
+  <div class="filters"><button class="active" data-cat="all">الكل</button><button data-cat="men">الرجال</button><button data-cat="women">النساء</button><button data-cat="offers">العروض</button></div>
+  <div id="products" class="products"><div class="loading">جاري تحميل المنتجات...</div></div>
+</section>
+<section id="offers" class="offerBand cinematic-offer" data-reveal><div><span>THE SELECTED EDIT</span><h2>القطع التي تستحق أن تُكتشف.</h2><p>اكتشف العروض والاختيارات المميزة قبل انتهاء توفرها.</p></div><a class="goldBtn" href="#shop">اكتشف العروض <span>↙</span></a></section>
+<section id="about" class="about section cinematic-about" data-reveal><div><span class="eyebrow">N BY N · OUR POINT OF VIEW</span><h2>الفخامة<br><em>في كل تفصيل.</em></h2></div><p>متجر N BY N يجمع بين الهوية الراقية وتجربة شراء سهلة وآمنة. المنتجات والأسعار والمخزون والطلبات والعملاء تتم إدارتها من لوحة تحكم واحدة.</p></section>
+<section id="contact" class="section contact cinematic-contact" data-reveal><div><span class="eyebrow">CUSTOMER SERVICE</span><h2>نحن هنا لمساعدتك.</h2><p>تواصل معنا للاستفسار عن منتج أو لمتابعة طلبك.</p></div><form id="contactForm"><input name="name" placeholder="الاسم الكامل" autocomplete="name" required><input name="email" type="email" placeholder="البريد الإلكتروني" autocomplete="email" required><input name="phone" type="tel" placeholder="رقم الهاتف / WhatsApp" autocomplete="tel" required><textarea name="message" placeholder="رسالتك" required></textarea><button class="goldBtn" type="submit">إرسال الرسالة <span>↙</span></button></form></section>
+</main>
+<footer class="cinematic-footer"><img src="./logo.jpg?v=20260930" alt="N by N"><div><b>N BY N</b><p>N BY N FOR ONLINE TRADING</p><p>دولة قطر · رقم المنشأة: 17-3174-69</p><p>71578241 · 66773373</p><p>© 2026 N BY N FOR ONLINE TRADING. جميع الحقوق محفوظة.</p></div><a href="./admin.html">لوحة الإدارة</a></footer>
+<aside id="cart" class="drawer" aria-hidden="true"><div class="drawerHead"><h3>سلة التسوق</h3><button id="closeCart" type="button">×</button></div><div id="cartItems"></div><div class="sum"><span>المجموع</span><strong id="cartTotal">0 QAR</strong></div><button id="checkout" class="goldBtn full" type="button">إتمام الطلب</button></aside>
+<div id="account" class="modal" aria-hidden="true"><div class="modalBox"><button class="close" data-close="account" type="button">×</button><span class="eyebrow">N BY N ACCOUNT</span><h2>حسابك</h2><div id="signupFields"><input id="authName" placeholder="الاسم الكامل" autocomplete="name"><input id="authPhone" type="tel" placeholder="رقم الهاتف / WhatsApp" autocomplete="tel" inputmode="tel"></div><input id="authEmail" type="email" placeholder="البريد الإلكتروني" autocomplete="email"><input id="authPass" type="password" placeholder="كلمة المرور (6 أحرف على الأقل)" autocomplete="current-password"><button id="signIn" class="goldBtn full" type="button">تسجيل الدخول</button><button id="signUp" class="outline full" type="button">إنشاء حساب جديد</button><button id="signOut" class="outline full hidden" type="button">تسجيل الخروج</button><p id="authMsg" class="message"></p></div></div>
+<div id="checkoutModal" class="modal" aria-hidden="true"><div class="modalBox"><button class="close" data-close="checkoutModal" type="button">×</button><span class="eyebrow">CHECKOUT</span><h2>بيانات التوصيل</h2><p class="muted">أدخل رقمك وعنوانك لإرسال الطلب.</p><input id="checkoutName" placeholder="الاسم الكامل" autocomplete="name"><input id="checkoutPhone" type="tel" placeholder="رقم الهاتف / WhatsApp" autocomplete="tel"><textarea id="checkoutAddress" placeholder="العنوان بالتفصيل"></textarea><button id="placeOrder" class="goldBtn full" type="button">تأكيد الطلب</button><p id="checkoutMsg" class="message"></p></div></div>
+<div id="productModal" class="modal" aria-hidden="true"><div class="modalBox productDetail"><button class="close" data-close="productModal" type="button">×</button><div id="productDetailBody"></div></div></div>
+<div id="ordersModal" class="modal" aria-hidden="true"><div class="modalBox"><button class="close" data-close="ordersModal" type="button">×</button><span class="eyebrow">YOUR ORDERS</span><h2>طلباتي</h2><div id="ordersBody"></div></div></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./config.js?v=20260930"></script>
+<script src="./store.js?v=20261009"></script>
+<script src="./cinematic.js?v=20261009"></script>
+</body></html>
