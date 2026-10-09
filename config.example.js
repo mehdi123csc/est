@@ -1,8 +1,7 @@
-// Future Supabase configuration.
-// Do NOT put a service_role key in the browser.
-// Use only the Supabase publishable/anon key for the public frontend.
-//
-// window.NBYN_CONFIG = {
-//   SUPABASE_URL: "https://YOUR_PROJECT.supabase.co",
-//   SUPABASE_KEY: "YOUR_PUBLISHABLE_OR_ANON_KEY"
-// };
+/* انسخ هذا الملف إلى config.js ثم ضع المفتاح Publishable/anon الخاص بمشروعك.
+   لا تضع service_role أو أي مفتاح سري داخل ملفات الموقع أو GitHub. */
+window.NBYN_CONFIG = {
+  SUPABASE_URL: 'https://iomrkxwclbkvadldqcxa.supabase.co',
+  SUPABASE_KEY: 'PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE',
+  CURRENCY: 'QAR'
+};
